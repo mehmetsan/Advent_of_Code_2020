@@ -8,7 +8,7 @@ def hit( x, y ):
     return False
 
 '''
-    PART TWO
+    PART ONE
 '''
 
 collision_count = 0
