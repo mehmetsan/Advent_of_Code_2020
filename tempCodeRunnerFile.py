@@ -1,0 +1,1 @@
+elif passport['hgt'][-2] == 'i'
