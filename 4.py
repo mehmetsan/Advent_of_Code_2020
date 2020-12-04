@@ -4,6 +4,8 @@ all_lines = [each.strip() for each in lines]
 all_lines.append(' ')   # NEED 1 MORE LINE FOR THE INPUT FILE FORMAT
 
 '''
+    PART ONE
+'''
 # INITIALIZATION
 new_passport = True
 req = []
@@ -13,16 +15,10 @@ for line in all_lines:
     if new_passport:
         req  = ['byr', 'iyr', 'eyr', 'hgt', 'hcl', 'ecl', 'pid', 'cid']
     if not line.strip(): # EMPTY LINE
-        print('Remaning', req)
         if len(req) == 0 or ( len(req) == 1 and req[0] == 'cid' ):
-            print( 'counted')
             count += 1
-        else:
-            print('Not counted')
-        print()
         new_passport = True
     else:               # NON-EMPTY LINE
-        print( line )
         if new_passport == True:
             new_passport = False
 
@@ -31,8 +27,10 @@ for line in all_lines:
 
 
 print( count )
-'''
 
+'''
+    PART TWO
+'''
 # INITIALIZATION
 new_passport = True
 req = []
@@ -52,10 +50,6 @@ for line in all_lines:
         req  = ['byr', 'iyr', 'eyr', 'hgt', 'hcl', 'ecl', 'pid', 'cid']
     if not line.strip(): # EMPTY LINE
         new_passport = True
-        try:
-            print(passport['ecl'])
-        except:
-            pass
         if len(req) == 0 or ( len(req) == 1 and req[0] == 'cid' ):
             # VALIDATON
             if int(passport['byr']) < 1920 or int(passport['byr']) > 2002:
