@@ -5,7 +5,7 @@ mults = []
 
 '''
     PART ONE
-'''
+''' 
 
 for ticket in all_lines:
     row_data = ticket[:7]
