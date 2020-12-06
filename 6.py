@@ -8,7 +8,7 @@ all_lines.append(' ')
 '''
     PART ONE
 '''
-groups = []
+
 group_inputs = []
 new_group = True
 count = 0
@@ -20,7 +20,6 @@ for line in all_lines:
     if not line.strip(): # EMPTY LINE
         prep = list(set(group_inputs))
         prep.sort()
-        groups.append( prep )
         count += len( prep )
 
         new_group = True
@@ -44,7 +43,7 @@ def reset_dict():
         alphabet_set[each] = 0
     return alphabet_set
 
-groups = []
+
 group_inputs = {}
 new_group = True
 people_count = 0
