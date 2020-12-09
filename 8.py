@@ -1,5 +1,3 @@
-import time
-
 def get_lines():    
     input_file = open('8_input.txt', 'r') 
     lines = input_file.readlines()
